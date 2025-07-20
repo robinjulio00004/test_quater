@@ -53,6 +53,8 @@
 	let mcam=document.querySelector('#mcamera');
 	let camrot=mcam.object3D.rotation;
 	let quat=mcam.object3D.quaternion;
+	var qx=0,qy=0,qz=0,qw=0;
+	qx=quat.x.toFixed(2); qy=quat.y.toFixed(2); qz=quat.z.toFixed(2); qw=quat.w.toFixed(2);
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -92,14 +94,14 @@
 	pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
 
-		if(quat.w<0.1 && quat.w > -0.1 && quat.y < 1.01 quat.y > 0.99 )
+		if(qw<0.1 && qw > -0.1 && qy < 1.01 && qy > 0.99 )
 		{
 			ejey=180;
 		}
 	document.getElementById("out1").innerHTML=ejey;
-	document.getElementById("out2").innerHTML=quat.y.toFixed(2);
-	document.getElementById("out3").innerHTML=quat.z.toFixed(2);
-	document.getElementById("out4").innerHTML=quat.w.toFixed(2);
+	document.getElementById("out2").innerHTML=qy;
+	document.getElementById("out3").innerHTML=qz;
+	document.getElementById("out4").innerHTML=qw;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
