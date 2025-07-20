@@ -34,7 +34,7 @@
 	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
 
 	<!-- Camera -->
-	      	<a-entity id="cameraview" position="0 0 20" rotation="-90 1 180" look-controls>
+	      	<a-entity id="cameraview" position="0 0 20" rotation="0 0 0" look-controls>
 		<a-camera>
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
@@ -92,9 +92,9 @@
 	document.getElementById("out1").innerHTML=pasos;
 	cam.object3D.position.z=vcamera-pasos;
 		
-	document.getElementById("out2").innerHTML=camrot.x;
-	document.getElementById("out3").innerHTML=camrot.y;
-	document.getElementById("out4").innerHTML=camrot.z;
+	document.getElementById("out2").innerHTML=camrot.x.toFixed(4);
+	document.getElementById("out3").innerHTML=camrot.y.toFixed(4);
+	document.getElementById("out4").innerHTML=camrot.z.toFixed(4);
 
 	});
 	
