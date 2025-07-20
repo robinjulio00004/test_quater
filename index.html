@@ -34,7 +34,7 @@
 	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
 
 	<!-- Camera -->
-	      	<a-entity id="cameraview" position="0 0 20" rotation="0 0 0"><!--*look-controls activa sensores en escena-->
+	      	<a-entity id="cameraview" position="0 0 20" rotation="-90 10 180"><!--*look-controls activa sensores en escena-->
 		<a-camera>
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
@@ -52,6 +52,7 @@
 	let cam=document.querySelector('#cameraview');
 	let camrot=cam.object3D.rotation;
 	let campost=cam.object3D.position;
+	let quat=cam.object3D.quaternion;
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -89,7 +90,7 @@
         }
 	flancoy = W;
 	pasos = parseInt(contador/2);
-	document.getElementById("out1").innerHTML=pasos;
+	document.getElementById("out1").innerHTML=quat.x;
 	cam.object3D.position.z=vcamera-pasos;
 		
 	document.getElementById("out2").innerHTML=camrot.x.toFixed(4);
