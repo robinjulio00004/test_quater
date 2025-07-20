@@ -35,7 +35,7 @@
 
 	<!-- Camera -->
 	      	<a-entity id="cameraview" position="0 0 20"><!--*look-controls activa sensores en escena-->
-		<a-camera id="mcamera" rotation="0 -180 10">
+		<a-camera id="mcamera" rotation="0 0 0">
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -108,7 +108,7 @@
 		{
 		ejey=180;
 		}
-		else if(qy < 0.2 && qy >-0.2)
+		if(qy < 0.2 && qy < -0.2)
 		{
 		ejey=0;
 		}
