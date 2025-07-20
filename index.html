@@ -99,7 +99,11 @@
 		/*{
 		ejey=180;
 		}*/
-		qy=-qy;
+		if(qy<0)
+		{
+			qy=qy*-1;
+		}
+		
 		if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
 		{
 		ejey=180;
