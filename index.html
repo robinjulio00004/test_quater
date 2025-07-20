@@ -95,20 +95,20 @@
 	pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
 
-		if( -0.95 < qy && qy < -1.1 || 1.1 > qy && qy > 0.95 )/*funciona en android*/
-		{
-		ejey=180;
-		}
-		/*if(qy<0.1)/*funciona en android y ios -  en android varía cerca del cero*/
+		/*if( -0.95 < qy && qy < -1.1 || 1.1 > qy && qy > 0.95 )/*funciona en android y parcialmente en ios falla -0.95*/
 		/*{
+		ejey=180;
+		}*/
+		if(qy<0.2)/*funciona en android & ios -  en android varía cerca del cero*/
+		{
 			qy=qy*-1;
 		}
 		
 		if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
-		/*{
+		{
 		ejey=180;
 		}
-		if(qy < 0.2 && qy < -0.2)
+		/*if(qy < 0.2 && qy < -0.2)
 		{
 		ejey=0;
 		}*/
