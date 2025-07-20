@@ -48,20 +48,17 @@
 	<!-- Javascript -->
 <script>
 	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0;
-	
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
+	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
-	let camrot=mcam.object3D.rotation;
 	let quat=mcam.object3D.quaternion;
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
-	var qx=0,qy=0,qz=0,qw=0,ejey=0;
-	qx=quat.x.toFixed(2); qy=quat.y.toFixed(2); qz=quat.z.toFixed(2); qw=quat.w.toFixed(2);
-	/*var gyrox=event.rotationRate.alpha;
-	var gyroy=event.rotationRate.beta;
-	var gyroz=event.rotationRate.gamma;*/
+	var qy=0,ejey=0;
+	qy=quat.y.toFixed(2);
+		
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
@@ -95,25 +92,25 @@
 	pasos = parseInt(contador/2);
 	cam.object3D.position.z=vcamera-pasos;
 
-		/*if( -0.95 < qy && qy < -1.1 || 1.1 > qy && qy > 0.95 )/*funciona bien en android y parcialmente en ios falla -0.95*/
-		/*{
+	/*if( -0.95 < qy && qy < -1.1 || 1.1 > qy && qy > 0.95 )/*funciona bien en android y parcialmente en ios falla -0.95*/
+	/*{
 		ejey=180;
-		}*/
+	}*/
 		
-		if(qy <= 0)/*funciona bien en ios -  en android varía cerca del cero*/
-		{
-			qy=qy*-1;
-		}
+	if(qy <= 0)/*funciona bien en ios -  en android varía cerca del cero*/
+	{
+		qy=qy*-1;
+	}
 		
-		if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
-		{
+	if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
+	{
 		ejey=180;
-		}
+	}
 
-	document.getElementById("out1").innerHTML=camrot.y;
-	document.getElementById("out2").innerHTML=qx;
+	document.getElementById("out1").innerHTML=pasos;
+	document.getElementById("out2").innerHTML=campost.z;
 	document.getElementById("out3").innerHTML=qy;
-	document.getElementById("out4").innerHTML=qz;
+	document.getElementById("out4").innerHTML=ejey;
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
