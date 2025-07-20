@@ -35,7 +35,7 @@
 
 	<!-- Camera -->
 	      	<a-entity id="cameraview" position="0 0 20"><!--*look-controls activa sensores en escena-->
-		<a-camera rotation="0 -180 10">
+		<a-camera id="mcamera" rotation="0 -180 10">
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -47,12 +47,12 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0;
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
-	let camrot=cam.object3D.rotation;
-	let campost=cam.object3D.position;
-	let quat=cam.object3D.quaternion;
+	let mcam=document.querySelector('#mcamera');
+	let camrot=mcam.object3D.rotation;
+	let quat=mcam.object3D.quaternion;
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -90,13 +90,12 @@
         }
 	flancoy = W;
 	pasos = parseInt(contador/2);
-	document.getElementById("out1").innerHTML=quat.x;
 	cam.object3D.position.z=vcamera-pasos;
-		
+	
+	document.getElementById("out1").innerHTML=quat.x.toFixed(4);
 	document.getElementById("out2").innerHTML=camrot.x.toFixed(4);
 	document.getElementById("out3").innerHTML=camrot.y.toFixed(4);
 	document.getElementById("out4").innerHTML=camrot.z.toFixed(4);
-
 	});
 	
 	/*window.addEventListener('devicemotion', function(){
