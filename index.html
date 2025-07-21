@@ -63,10 +63,10 @@
 		}
 		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
 		{
-		document.querySelector('#msg1').innerHTML="Modo Horizontal ACTIVADO, Favor de regresar al modo anterior";
+		document.querySelector('#msg1').innerHTML="Modo Horizontal ACTIVADO <br /> Favor de regresar al modo anterior";
 		}
 
-	document.querySelector('#msg2').innerHTML=qw;
+	/*document.querySelector('#msg2').innerHTML=qw;*/
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
@@ -110,13 +110,10 @@
 		qy=qy*-1;
 	}
 		
-	if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
+	if( qy > 0.95 )
 	{
 		ejey=180;
 	}
-
-	/*document.getElementById("msg1").innerHTML=qy;
-	document.getElementById("msg2").innerHTML=ejey;*/
 
 	});
 	
