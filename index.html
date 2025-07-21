@@ -22,7 +22,7 @@
 	
 	<div class="mensaje">
  	 <div id="advertencia">
-    	<img src="rotacion_celular.png" width="100px" />
+    	<img id="img" style="display: none;" src="rotacion_celular.png" width="100px" />
     	Modo horizontal ACTIVADO<br>
 	Favor de regresar al modo vertical
   	</div>
@@ -62,6 +62,7 @@
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
 	const mensa=document.querySelector('#advertencia');
+	const imag=document.querySelector('#img');
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -79,7 +80,7 @@
 	/*document.getElementById("out1").innerHTML="modo horizontal activado";
 	document.getElementById("out2").innerHTML="-90 o 90 grados de rotación";*/
 		mensa.style.display = 'block';
-		
+		imag.style.display = 'block';
 		}
 		mensa.style.display = 'none';
 		
