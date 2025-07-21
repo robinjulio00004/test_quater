@@ -20,7 +20,7 @@
       width: 5em;
       height: 1em;
     }
-    .mensaje {
+    #mensaje {
   z-index: 998;
   height: 100%;
   width: 100%;
