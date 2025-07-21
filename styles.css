@@ -34,7 +34,6 @@
   justify-content: center;
     }
 #advertencia{
-  display: none;
   flex-direction: column;
   align-items: center;
   width: 50%;
