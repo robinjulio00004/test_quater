@@ -14,7 +14,8 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
 	<div class="formato">
- 	 <div class="mensaje"></div>
+ 	 <div class="mensaje1"></div>
+	<div class="mensaje2"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -63,7 +64,7 @@
 
 		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
 		{
-		document.querySelector(".mensaje").innerHTML="Modo Horizontal a 90";
+		document.querySelector(".mensaje1").innerHTML="Modo Horizontal a 90";
 		}
 		Ay = accely;
 		y1 = Ay;
@@ -98,13 +99,12 @@
 	pasos = parseInt(contador/2);
 	document.getElementById("out1").innerHTML=pasos;
 	cam.object3D.position.z=vcamera-pasos;
+	document.querySelector(".mensaje2").innerHTML=pasos;
 		
-	document.getElementById("out2").innerHTML=qw;
-	document.getElementById("out4").innerHTML=qz;
+	/*document.getElementById("out2").innerHTML=qw;
+	document.getElementById("out4").innerHTML=qz;*/
 
 	});
 	
-	/*window.addEventListener('devicemotion', function(){
-        },true); Otra alternativa*/	
 </script>
 </html>
