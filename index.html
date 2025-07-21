@@ -50,14 +50,24 @@
 	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
-	let camrot=cam.object3D.rotation;
 	let campost=cam.object3D.position;
+	let mcam=document.querySelector('#mcamera');
+	let quat=mcam.object3D.quaternion;
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
-	/*var gyrox=event.rotationRate.alpha;
-	var gyroy=event.rotationRate.beta;
-	var gyroz=event.rotationRate.gamma;*/
+	var qy=0,ejey=0,qw=0,qz=0;
+	qy=quat.y.toFixed(2),qw=quat.w.toFixed(2), qz=quat.z.toFixed(2);
+		
+		if(qz <= 0)
+		{
+		qz=qz*-1;
+		}
+
+		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
+		{
+		document.getElementById("out3").innerHTML="Modo Horizontal a 90";
+		}
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
@@ -92,9 +102,8 @@
 	document.getElementById("out1").innerHTML=pasos;
 	cam.object3D.position.z=vcamera-pasos;
 		
-	document.getElementById("out2").innerHTML=contador;
-	document.getElementById("out3").innerHTML=0;
-	document.getElementById("out4").innerHTML=Y.toFixed(4);
+	document.getElementById("out2").innerHTML=qw;
+	document.getElementById("out4").innerHTML=qz;
 
 	});
 	
