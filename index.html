@@ -13,9 +13,11 @@
 	</head>
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
-	<div class="formato">
- 	 <div id="mensaje1"></div>
-	<div id="mensaje2"></div>
+	<div class="valores">
+ 	 <div id="out1"></div>
+	 <div id="out2"></div>
+	 <div id="out3"></div>
+	<div id="out4"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -32,8 +34,8 @@
 	<a-entity gltf-model="#glb_model1" scale="0.5 0.5 0.5" position="2 0.5 2" rotation="0 0 0"></a-entity>	
 
 	<!-- Camera -->
-	      	<a-entity id="cameraview" position="0 0 20" rotation="0 0 0">
-		<a-camera>
+	      	<a-entity id="cameraview" position="0 0 20"><!--*look-controls activa sensores en escena-->
+		<a-camera id="mcamera" rotation="0 0 0">
   		<a-entity cursor="fuse: true; fuseTimeout: 500"
             	position="0 0 -3"
             	geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -45,35 +47,18 @@
 </body>
 	<!-- Javascript -->
 <script>
-	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0, npost=0;
+	let y1=0, y2=0, y3=0, y4=0, y5=0, y6=0, Y=0, Ay=0, W=0, flancoy=0, pasos=0, contador=0;
 	const vcamera=20;
 	let cam=document.querySelector('#cameraview');
 	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
-	/*const mensa1=document.getElementById("mensaje1");
-	const mensa2=document.getElementById("mensaje2");*/
-	
+
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0;
 	qy=quat.y.toFixed(2);
-	qw=quat.w.toFixed(2);
-	qz=quat.z.toFixed(2);
-	/*mensa1.innerHTML=" ";*/
-		/*mensa1.innerHTML="Modo Horizontal a 90";*/
-		/*mensa1.innerHTML=accely;*/
-		document.getElementById("mensaje2").innerHTML=accely;
 		
-		/*if(qz <= 0)
-		{
-		qz=qz*-1;
-		}
-
-		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
-		{
-		
-		}*/
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
@@ -105,16 +90,30 @@
         }
 	flancoy = W;
 	pasos = parseInt(contador/2);
-	/*document.getElementById("out1").innerHTML=pasos;*/
 	cam.object3D.position.z=vcamera-pasos;
-	/*document.querySelector(".mensaje2").innerHTML=pasos;*/
-	document.getElementById("mensaje2").innerHTML=pasos;
-	/*mensa2.innerHTML=qw;*/
-		
-	/*document.getElementById("out2").innerHTML=qw;
-	document.getElementById("out4").innerHTML=qz;*/
 
+	/*if( -0.95 < qy && qy < -1.1 || 1.1 > qy && qy > 0.95 )/*funciona bien en android y parcialmente en ios falla -0.95*/
+	/*{
+		ejey=180;
+	}*/
+		
+	if(qy <= 0)/*funciona bien en ios -  en android varía cerca del cero*/
+	{
+		qy=qy*-1;
+	}
+		
+	if( qy > 0.95 )/*funciona parcialmente en iOS - falla -0.95*/
+	{
+		ejey=180;
+	}
+
+	document.getElementById("out1").innerHTML=pasos;
+	document.getElementById("out2").innerHTML=campost.z;
+	document.getElementById("out3").innerHTML=qy;
+	document.getElementById("out4").innerHTML=ejey;
 	});
 	
+	/*window.addEventListener('devicemotion', function(){
+        },true); Otra alternativa*/	
 </script>
 </html>
