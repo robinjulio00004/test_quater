@@ -20,7 +20,7 @@
 	<div id="out4"></div>
 	</div>-->
 	
-	<div id="mensaje">
+	<div class="mensaje">
  	 <div id="advertencia">
     	<img src="rotacion_celular.png" width="100px" />
     	Modo horizontal ACTIVADO<br>
@@ -61,8 +61,7 @@
 	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
-	const mensa=document.querySelector('#mensaje');
-	const vals=document.querySelector('.valores');
+	const mensa=document.querySelector('#advertencia');
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -80,10 +79,10 @@
 	/*document.getElementById("out1").innerHTML="modo horizontal activado";
 	document.getElementById("out2").innerHTML="-90 o 90 grados de rotación";*/
 		mensa.style.display = 'block';
-		vals.style.display = 'none';
+		
 		}
 		mensa.style.display = 'none';
-		vals.style.display = 'block';
+		
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
