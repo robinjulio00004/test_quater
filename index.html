@@ -55,8 +55,18 @@
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0;
-	qy=quat.y.toFixed(2);
-		
+	qy=quat.y.toFixed(2), qw=quat.w.toFixed(2), qz=quat.z.toFixed(2);
+	document.querySelector('#msg1').innerHTML=" ";
+		if(qz <= 0)
+		{
+		qz=qz*-1;
+		}
+		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
+		{
+		document.querySelector('#msg1').innerHTML="Modo Horizontal ACTIVADO, Favor de regresar al modo anterior";
+		}
+
+	document.querySelector('#msg2').innerHTML=qw;
 		Ay = accely;
 		y1 = Ay;
 		y2 = y1;
@@ -105,8 +115,6 @@
 		ejey=180;
 	}
 
-	document.querySelector('#msg1').innerHTML=qy;
-	document.querySelector('#msg2').innerHTML=ejey;
 	/*document.getElementById("msg1").innerHTML=qy;
 	document.getElementById("msg2").innerHTML=ejey;*/
 
