@@ -58,7 +58,9 @@
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0,qw=0,qz=0;
 	qy=quat.y.toFixed(2);qw=quat.w.toFixed(2); qz=quat.z.toFixed(2);
-	mensa1.innerHTML=" ";
+	/*mensa1.innerHTML=" ";*/
+		/*mensa1.innerHTML="Modo Horizontal a 90";*/
+		mensa1.innerHTML=accely;
 		
 		if(qz <= 0)
 		{
@@ -67,7 +69,7 @@
 
 		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
 		{
-		mensa1.innerHTML="Modo Horizontal a 90";
+		
 		}
 		Ay = accely;
 		y1 = Ay;
@@ -103,7 +105,7 @@
 	/*document.getElementById("out1").innerHTML=pasos;*/
 	cam.object3D.position.z=vcamera-pasos;
 	/*document.querySelector(".mensaje2").innerHTML=pasos;*/
-	mensa2.innerHTML=pasos;
+	mensa2.innerHTML=qw;
 		
 	/*document.getElementById("out2").innerHTML=qw;
 	document.getElementById("out4").innerHTML=qz;*/
