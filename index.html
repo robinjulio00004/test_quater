@@ -14,7 +14,7 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
 	<div class="formato">
- 	 <div id="mensaje"></div>
+ 	 <div class="mensaje"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -63,7 +63,7 @@
 
 		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
 		{
-		document.getElementById("mensaje").innerHTML="Modo Horizontal a 90";
+		document.querySelector(".mensaje").innerHTML="Modo Horizontal a 90";
 		}
 		Ay = accely;
 		y1 = Ay;
