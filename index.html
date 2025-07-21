@@ -61,8 +61,8 @@
 	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
-	let mensa=document.querySelector('.mensaje');
-	let vals=document.querySelector('.valores');
+	const mensa=document.querySelector('.mensaje');
+	const vals=document.querySelector('.valores');
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
