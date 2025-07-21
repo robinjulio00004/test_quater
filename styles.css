@@ -1,4 +1,4 @@
-    .valores {
+    .valores,.mensaje {
       position: absolute;
       bottom: 10;
       left: 0;
@@ -20,7 +20,7 @@
       width: 5em;
       height: 1em;
 }
-#mensaje{
+#advertencia{
   display: none;
   flex-direction: column;
   align-items: center;
