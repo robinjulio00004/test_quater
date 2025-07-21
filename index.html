@@ -20,12 +20,8 @@
 	<div id="out4"></div>
 	</div>-->
 	
-	<div class="mensaje">
- 	 <div id="advertencia" style="display: none;">
-    	<img id="img" src="rotacion_celular.png" width="100px" />
-    	Modo horizontal ACTIVADO<br />
-	Favor de regresar al modo vertical
-  	</div>
+	<div class="formato">
+ 	<button type="button" class="mensaje" style="display: none;" >Modo Horizontal ACTIVADO <br/> Favor de regresar a modo Vertical </button>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -63,6 +59,7 @@
 	let quat=mcam.object3D.quaternion;
 	/*const mensa=document.querySelector('#advertencia');*/
 	const imag=document.querySelector('#img');
+	const mensa = document.querySelector('.mensaje');
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -81,7 +78,8 @@
 	document.getElementById("out2").innerHTML="-90 o 90 grados de rotación";*/
 		/*mensa.style.display = 'block';
 		imag.style.display = 'block';*/
-		document.querySelector('#advertencia').style.display='block';
+		/*document.querySelector('#advertencia').style.display='block';*/
+			mensa.style.display = 'block';
 		}
 		mensa.style.display = 'none';
 		
