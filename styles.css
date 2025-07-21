@@ -1,4 +1,4 @@
-    .formato {
+    .valores {
       position: absolute;
       bottom: 10;
       left: 0;
@@ -9,8 +9,8 @@
       align-items: center;
       z-index: 10;
     }
-#mensaje{
-      
+#out1,#out2,#out3,#out4{
+      /*margin-bottom: 20px;/*espacio entre divs*/
       text-align: center;
       padding: 0.50em;
       border-radius: 4px;
