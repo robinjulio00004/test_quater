@@ -1,4 +1,4 @@
-    .valores {
+/*    .valores {
       position: absolute;
       bottom: 10;
       left: 0;
@@ -11,7 +11,7 @@
     }
 #out1,#out2,#out3,#out4{
       /*margin-bottom: 20px;/*espacio entre divs*/
-      text-align: center;
+     /* text-align: center;
       padding: 0.50em;
       border-radius: 4px;
       border: 1px solid white;
@@ -19,8 +19,8 @@
       color: blue;
       width: 5em;
       height: 1em;
-    }
-  /*  #mensaje {
+    }*/
+  #mensaje {
   z-index: 998;
   height: 100%;
   width: 100%;
@@ -30,7 +30,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-    }*/
+    }
 #advertencia{
   display: flex;
   flex-direction: column;
@@ -41,4 +41,4 @@
   font-family: sans-serif;
   font-size: 1.5em;
   text-align: center;
-    }
+}
