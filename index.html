@@ -57,8 +57,9 @@
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0,qw=0,qz=0;
-	const mensa=document.getElementById("mensaje");
-	mensa.innerHTML=" ";
+	/*const mensa=document.getElementById("mensaje");
+	mensa.innerHTML=" ";*/
+	document.getElementById("mensaje").innerHTML=" ";
 	qy=quat.y.toFixed(2), qw=quat.w.toFixed(2), qz=quat.z.toFixed(2);
 		
 		if(qz <= 0)
@@ -67,7 +68,7 @@
 		}
 		if(qw > 0.67 && qw < 0.73 && qz > 0.67 && qz < 0.73)
 		{
-		mensa.innerHTML="modo horizontal ACTIVADO, Favor de regresar a modo Vertical";
+		document.getElementById("mensaje").innerHTML="modo horizontal ACTIVADO, Favor de regresar a modo Vertical";
 		}
 		
 		Ay = accely;
