@@ -14,8 +14,8 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
 	<div class="formato">
- 	 <div class="mensaje1"></div>
-	<div class="mensaje2"></div>
+ 	 <div id="mensaje1"></div>
+	<div id="mensaje2"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -51,11 +51,14 @@
 	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
+	const mensa1=document.getElementById("mensaje1");
+	const mensa2=document.getElementById("mensaje2");
 	
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0,qw=0,qz=0;
 	qy=quat.y.toFixed(2);qw=quat.w.toFixed(2); qz=quat.z.toFixed(2);
+	mensa1.innerHTML=" ";
 		
 		if(qz <= 0)
 		{
@@ -64,7 +67,7 @@
 
 		if( qw > 0.68 && qw < 0.72 && qz > 0.68 && qz < 0.72 )
 		{
-		document.querySelector(".mensaje1").innerHTML="Modo Horizontal a 90";
+		mensa1.innerHTML="Modo Horizontal a 90";
 		}
 		Ay = accely;
 		y1 = Ay;
@@ -99,7 +102,8 @@
 	pasos = parseInt(contador/2);
 	/*document.getElementById("out1").innerHTML=pasos;*/
 	cam.object3D.position.z=vcamera-pasos;
-	document.querySelector(".mensaje2").innerHTML=pasos;
+	/*document.querySelector(".mensaje2").innerHTML=pasos;*/
+	mensa2.innerHTML=pasos;
 		
 	/*document.getElementById("out2").innerHTML=qw;
 	document.getElementById("out4").innerHTML=qz;*/
