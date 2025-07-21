@@ -20,7 +20,7 @@
 	<div id="out4"></div>
 	</div>
 	
-	<div id="men" class="mensaje">
+	<div id="mensaje">
  	 <div id="advertencia">
     	<!--<img src="./assets/rotate.svg" width="100px" />-->
     	Modo horizontal ACTIVADO<br>
@@ -61,7 +61,7 @@
 	let campost=cam.object3D.position;
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
-	const mensa=document.querySelector('.mensaje');
+	const mensa=document.querySelector('#mensaje');
 	const vals=document.querySelector('.valores');
 
 	window.addEventListener("devicemotion", (event)=> {
