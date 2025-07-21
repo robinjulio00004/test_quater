@@ -13,11 +13,9 @@
 	</head>
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
-	<div class="valores">
- 	 <div id="out1"></div>
-	 <div id="out2"></div>
-	 <div id="out3"></div>
-	<div id="out4"></div>
+	<div class="fmsg">
+ 	 <div id="msg1"></div>
+	 <div id="msg2"></div>
 	</div>
 	<!-- Scene -->
       <a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -107,13 +105,11 @@
 		ejey=180;
 	}
 
-	document.getElementById("out1").innerHTML=pasos;
-	document.getElementById("out2").innerHTML=campost.z;
-	document.getElementById("out3").innerHTML=qy;
-	document.getElementById("out4").innerHTML=ejey;
+	document.getElementById("msg1").innerHTML=pasos;
+	document.getElementById("msg2").innerHTML=campost.z;
+	/*document.getElementById("out3").innerHTML=qy;
+	document.getElementById("out4").innerHTML=ejey;*/
 	});
 	
-	/*window.addEventListener('devicemotion', function(){
-        },true); Otra alternativa*/	
 </script>
 </html>
