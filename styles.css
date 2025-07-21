@@ -27,7 +27,7 @@
   position: absolute;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
     }
