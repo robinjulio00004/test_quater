@@ -58,6 +58,12 @@
 	var accely=event.acceleration.y;
 	var qy=0,ejey=0,qw=0,qz=0;
 	qy=quat.y.toFixed(2), qw=quat.w.toFixed(2), qz=quat.z.toFixed(2);
+		qz=qz*-1;
+		if(qw > 0.67 && qw < 0.73 && qz > 0.67 && qz < 0.73)
+		{
+	document.getElementById("out1").innerHTML="modo horizontal activado";
+	document.getElementById("out2").innerHTML="90 grados rotación";
+		}
 		
 		Ay = accely;
 		y1 = Ay;
@@ -107,8 +113,7 @@
 		ejey=180;
 	}
 
-	document.getElementById("out1").innerHTML=qw;
-	document.getElementById("out2").innerHTML=qz;
+
 	document.getElementById("out3").innerHTML=qy;
 	document.getElementById("out4").innerHTML=ejey;
 	});
