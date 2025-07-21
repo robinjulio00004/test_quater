@@ -58,8 +58,8 @@
 	let mcam=document.querySelector('#mcamera');
 	let quat=mcam.object3D.quaternion;
 	/*const mensa=document.querySelector('#advertencia');*/
-	const imag=document.querySelector('#img');
-	const mensa = document.querySelector('#button1');
+	/*const imag=document.querySelector('#img');*/
+	
 
 	window.addEventListener("devicemotion", (event)=> {
 	var accely=event.acceleration.y;
@@ -79,9 +79,10 @@
 		/*mensa.style.display = 'block';
 		imag.style.display = 'block';*/
 		/*document.querySelector('#advertencia').style.display='block';*/
-		mensa.style.display = 'block';
+		document.querySelector("#button1").style.display='block';
+		/*mensa.style.display = 'block';*/
 		}
-		mensa.style.display = 'none';
+		/*mensa.style.display = 'none';*/
 		
 		Ay = accely;
 		y1 = Ay;
