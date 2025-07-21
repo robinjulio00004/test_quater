@@ -20,7 +20,7 @@
       width: 5em;
       height: 1em;
     }*/
-  .mensaje {
+  #mensaje {
   bottom: 0;
   left: 0;
   z-index: 10;
@@ -43,4 +43,9 @@
   font-family: sans-serif;
   font-size: 1.5em;
   text-align: center;
+}
+#advertencia img {
+
+  margin-bottom: 20px;
+
 }
