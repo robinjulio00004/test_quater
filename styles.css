@@ -10,7 +10,6 @@ body{
       margin:0px;
       top: 10px;
       left: 5px;
-      transform: rotate(90deg);
       border: 2px solid blue;
       width: 95%;
       height: 95%;
@@ -20,6 +19,7 @@ body{
     }
 #msg1{
       display: none;
+      transform: rotate(90deg);
       text-align: center;
       align-items: center;
       border: 2px solid white;
