@@ -30,7 +30,7 @@ body{
       -webkit-backdrop-filter: blur(10px);
       background-image: url("rotacion_celular.png");
       background-repeat: no-repeat;
-      background-size: 100px 100px;
+      background-size: 150px 150px;
       background-position: center;
       box-sizing: border-box;
 }
