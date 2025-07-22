@@ -32,8 +32,8 @@ body{
       background-repeat: no-repeat;
       background-size: 100px 100px;
       */
-      border: 20px solid white;
-      padding: 20px;
+      border: 1px solid white;
+      padding: 150px;
       box-sizing: border-box;
       
       /*z-index: 10;*/
