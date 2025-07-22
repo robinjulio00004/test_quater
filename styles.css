@@ -23,7 +23,7 @@ body{
       transform: rotate(90deg);
       color: red;
       font-family: sans-serif;
-      font-size: 3rem;
+      font-size: 10rem;
       font-weight: bold;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
