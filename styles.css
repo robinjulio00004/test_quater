@@ -20,6 +20,8 @@ body{
     }
 #msg1{
       display: none;
+      transform: rotate(90deg);
+      color: red;
       /*position: absolute;
       transform: rotate(90deg);
       text-align: center;
@@ -34,7 +36,7 @@ body{
       background-repeat: no-repeat;
       background-size: 100px 100px;
       justify-content: center;*/
-      color: red;
+      
       /*width: 95%;
       height: 95%;*/
       /*border: 20px solid white;*/
