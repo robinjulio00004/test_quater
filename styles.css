@@ -20,7 +20,7 @@ body{
     }
 #msg1{
       display: none;
-      position: absolute;
+      /*position: absolute;
       transform: rotate(90deg);
       text-align: center;
       align-items: center;
@@ -30,16 +30,16 @@ body{
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       /*background: rgba(128,128,128,0);*/
-      background-image: url("rotacion_celular.png");
+      /*background-image: url("rotacion_celular.png");
       background-repeat: no-repeat;
       background-size: 100px 100px;
-      justify-content: center;
+      justify-content: center;*/
       color: red;
       /*width: 95%;
       height: 95%;*/
-      border: 20px solid white;
+      /*border: 20px solid white;*/
       /*padding: 20px;*/
       /*box-sizing: border-box;*/
-      z-index: 10;
+      /*z-index: 10;*/
 }
 
