@@ -31,7 +31,7 @@ body{
       /*background: rgba(128,128,128,0);*/
       background-image: url("rotacion_celular.png");
       background-repeat: no-repeat;
-      /*background-size: 100px 100px;*/
+      background-size: 100px 100px;
       box-sizing: border-box;
 }
 
