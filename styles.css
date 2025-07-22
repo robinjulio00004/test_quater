@@ -22,13 +22,13 @@ body{
       display: none;
       transform: rotate(90deg);
       color: red;
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: bold;
       /*position: absolute;
       transform: rotate(90deg);
       text-align: center;
       align-items: center;
-      font-family: sans-serif;
-      font-size: 20px;
-      font-weight: bold;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       /*background: rgba(128,128,128,0);*/
