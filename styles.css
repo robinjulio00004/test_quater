@@ -15,7 +15,6 @@ body{
       height: 95%;
       justify-content: center;
       align-items: center;
-      background-image: url("rotacion_celular.png");
       z-index: 8;
     }
 #msg1{
@@ -29,6 +28,8 @@ body{
       font-weight: bold;
       backdrop-filter: blur(10px);
       background: rgba(128,128,128,0);
+      background-image: url("rotacion_celular.png");
+      background-size: auto auto;
       color: red;
       z-index: 10;
       /*width: 80%;
