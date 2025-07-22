@@ -1,6 +1,6 @@
 body{
   margin:0px;
-  width:50vw;
+  width:100vw;/*50*/
   height:100vh;
   overflow:hidden;
 }
@@ -29,6 +29,6 @@ body{
       background: rgba(128,128,128,0);
       color: red;
       width: 50%;
-      height: 50%;
+      height: 80%;
 }
 
