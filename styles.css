@@ -7,9 +7,9 @@ body{
 .fmsg {
       display: flex;
       position: absolute;
-      /*margin:0px;*/
-    top: 0px;
-    left: 0px;
+      margin:0px;
+      top: 0px;
+      left: 0px;
     /*margin-top: -50px;
     margin-left: -50px;
       /*transform: rotate(90deg);*/
