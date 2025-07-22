@@ -10,14 +10,15 @@ body{
       /*margin:0px;*/
     top: 0px;
     left: 0px;
+    padding:5%;
     /*margin-top: -50px;
     margin-left: -50px;
       /*transform: rotate(90deg);*/
       border: 2px solid blue;
       /*bottom:10;
       left: 10;*/
-      width: 90%;
-      height: 90%;
+      width: 95%;
+      height: 95%;
       /*min-width: 100vw;
       min-height: 100vh;
       /*height: 100%;*/
