@@ -33,7 +33,8 @@ body{
       background-size: 100px 100px;
       */
       border: 1px solid white;
-      padding: 150px;
+      width: 100px;
+      height: 100px;
       box-sizing: border-box;
       
       /*z-index: 10;*/
