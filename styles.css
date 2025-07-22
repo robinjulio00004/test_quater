@@ -10,9 +10,7 @@ body{
       margin:0px;
       top: 10px;
       left: 5px;
-    /*margin-top: -50px;
-    margin-left: -50px;
-      /*transform: rotate(90deg);*/
+      transform: rotate(90deg);
       border: 2px solid blue;
       width: 95%;
       height: 95%;
