@@ -25,7 +25,7 @@ body{
       font-family: sans-serif;
       font-size: 1.5em;
       font-weight: bold;
-      writing-mode: vertical-rl;
+      writing-mode: vertical-lr;
       text-orientation: mixed;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
