@@ -30,6 +30,7 @@ body{
       font-size: 20px;
       font-weight: bold;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       background: rgba(128,128,128,0);
       background-image: url("rotacion_celular.png");
       background-size: 100px 100px;
