@@ -1,4 +1,10 @@
-    .fmsg {
+body{
+ margin:0px;
+  width:100vw;
+  height:100vh;
+  overflow:auto;
+}
+.fmsg {
       display: flex;
       position: absolute;
     top: 50%;
@@ -9,8 +15,8 @@
       border: 2px solid blue;
       /*bottom:10;
       left: 10;*/
-      width: 100vw;
-      height: 100vh;
+      /*width: 100vw;
+      height: 100vh;*/
       /*min-width: 100vw;
       min-height: 100vh;
       /*height: 100%;*/
