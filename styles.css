@@ -19,6 +19,7 @@ body{
     }
 #msg1{
       display: none;
+      position: absolute;
       transform: rotate(90deg);
       text-align: center;
       align-items: center;
@@ -34,6 +35,8 @@ body{
       background-size: 100px 100px;
       justify-content: center;
       color: red;
+      width: 95%;
+      height: 95%;
       box-sizing: border-box;
       z-index: 10;
 }
