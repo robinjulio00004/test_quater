@@ -1,6 +1,6 @@
 body{
   margin:0px;
-  width:100vw;/*50*/
+  width:100vw;
   height:100vh;
   overflow:hidden;
 }
@@ -29,10 +29,9 @@ body{
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       /*background: rgba(128,128,128,0);*/
-      /*background-image: url("rotacion_celular.png");
+      background-image: url("rotacion_celular.png");
       background-repeat: no-repeat;
-      background-size: 100px 100px;
-      */
+      /*background-size: 100px 100px;*/
       box-sizing: border-box;
 }
 
