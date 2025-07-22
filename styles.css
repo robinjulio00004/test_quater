@@ -1,6 +1,7 @@
     .fmsg {
       position: absolute;
       transform: rotate(90deg);
+      border: 2px solid blue;
       /*bottom:10;
       left: 10;*/
       width: 100%;
