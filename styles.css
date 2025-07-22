@@ -27,18 +27,15 @@ body{
       font-weight: bold;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      /*
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
       /*background: rgba(128,128,128,0);*/
       /*background-image: url("rotacion_celular.png");
       background-repeat: no-repeat;
       background-size: 100px 100px;
       */
+      border: 20px solid white;
+      padding: 20px;
       box-sizing: border-box;
-      /*border: 20px solid white;*/
-      /*padding: 20px;*/
-      /*box-sizing: border-box;*/
+      
       /*z-index: 10;*/
 }
 
