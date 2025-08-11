@@ -5,8 +5,8 @@ body{
   overflow:hidden;
 }
 .fmsg {
-      display: flex;
-      /*position: absolute;*/
+      /*display: flex;*/
+      position: absolute;
       margin:0px;
       top: 10px;
       left: 5px;
@@ -33,6 +33,7 @@ body{
       background-position: center;
       box-sizing: border-box;
 }
+
 
 
 
